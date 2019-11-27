@@ -1,0 +1,51 @@
+
+CSS selectors
+#phone_book_items {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#phone_book_items td, #phone_book_items th {
+    border: 1px solid blue;
+    padding: 15px;
+}
+
+#phone_book_items tr:nth-child(even){background-color: #f2f2f2;}
+
+#phone_book_items tr:hover {background-color: burlywood;}
+#phone_book_items th {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: yellow;
+}
+
+/*table, td, th {*/
+/*    border: 1px solid blue;*/
+/*}*/
+
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    width: 98%;*/
+/*}*/
+
+/*td {*/
+/*    height: 50px;*/
+/*    vertical-align: bottom;*/
+/*}*/
+
+
+
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    width: 98%;*/
+/*}*/
+
+/*th, td {*/
+/*    text-align: left;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*tr:nth-child(even) {background-color: #f2f2f2;}*/

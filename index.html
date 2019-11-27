@@ -5,12 +5,25 @@
     <title>Phonebook</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 
 <div id="content">
+
+    <h1>Phonebook</h1>
+
+    <h3>Add new contact</h3>
+
+    <form id="create-item-form">
+        <!--        <label for="description-field">Description:</label>-->
+        <input type="text" id="search-field" placeholder="Search">
+
+        <input type="submit" id="submit-form">
+    </form>
 
     <table id="phone_book_items">
         <thead>
@@ -27,44 +40,41 @@
         </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Kovacs</td>
-                <td>Andrea</td>
-                <td>Andi</td>
-                <td>0123456789</td>
-                <td>andi_babett@yahoo.com</td>
-                <td>Cluj-Napoca</td>
-                <td><input type="checkbox" class="mark-done"></td>
-                <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Andrea</td>
-                <td>Babett</td>
-                <td>Babett</td>
-                <td>0123456789</td>
-                <td>andreababettkovacs@gmail.com</td>
-                <td>Cluj-Napoca</td>
-                <td><input type="checkbox" class="mark-done"></td>
-                <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Kovacs</td>
-                <td>Babett</td>
-                <td>Andi</td>
-                <td>0123456789</td>
-                <td>andi_babett@yahoo.com</td>
-                <td>Cluj-Napoca</td>
-                <td><input type="checkbox" class="mark-done"></td>
-                <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
-            </tr>
+        <tr>
+            <td>1</td>
+            <td>Kovacs</td>
+            <td>Andrea</td>
+            <td>Andi</td>
+            <td>0123456789</td>
+            <td>andi_babett@yahoo.com</td>
+            <td>Cluj-Napoca</td>
+            <td><input type="checkbox" class="mark-done"></td>
+            <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Andrea</td>
+            <td>Babett</td>
+            <td>Babett</td>
+            <td>0123456789</td>
+            <td>andreababettkovacs@gmail.com</td>
+            <td>Cluj-Napoca</td>
+            <td><input type="checkbox" class="mark-done"></td>
+            <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Kovacs</td>
+            <td>Babett</td>
+            <td>Andi</td>
+            <td>0123456789</td>
+            <td>andi_babett@yahoo.com</td>
+            <td>Cluj-Napoca</td>
+            <td><input type="checkbox" class="mark-done"></td>
+            <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
         </tbody>
     </table>
-
 </div>
-
-
 </body>
 </html>

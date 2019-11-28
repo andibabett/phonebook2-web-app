@@ -14,6 +14,23 @@ window.Phonebook = {
         });
     },
 
+    createItem: function (){
+       let searchValue = $("#search-field").val();
+
+        var requestBody = {
+            search: searchValue,
+        };
+
+        $.ajax({
+            url: Phonebook.API_URL,
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(requestBody)
+        }).done(function () {
+            Phonebook.getItems();
+        })
+    },
+
     displayItems: function (items) {
         var tableContent = "";
 
@@ -28,18 +45,28 @@ window.Phonebook = {
         var checkedDone=item.done ? "checked" : "";
 
         return `<tr>
+            <th>${item.id}</th>
             <td>${item.firstName}</td>
             <td>${item.lastName}</td>
             <td>${item.nickName}</td>
             <td>${item.phoneNumber}</td>
             <td>${item.emailAdress}</td>
             <td>${item.homeAdress}</td>
-            <td><input type="checkbox" class="mark-done" data-id="${item.id}" ${checkedDone}></td>
             <td><a href="#" class="delete-item" data-id="${item.id}>
             <i class="fas fa-trash-alt"></i></a></td>
         </tr>`
 
-    }
+    },
+
+    bindEvents: function () {
+        $("#create-item-form").submit (function (event) {
+            event.preventDefault();
+
+            Phonebook.createItem();
+
+         })
+    },
 };
 
 Phonebook.getItems();
+Phonebook.bindEvents();

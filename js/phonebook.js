@@ -16,9 +16,8 @@ window.Phonebook = {
 
     createItem: function (){
        let searchValue = $("#search-field").val();
-
         var requestBody = {
-            search: searchValue,
+            search: searchValue
         };
 
         $.ajax({
@@ -26,6 +25,15 @@ window.Phonebook = {
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify(requestBody)
+        }).done(function () {
+            Phonebook.getItems();
+        })
+    },
+
+    deleteItem: function(id){
+        $.ajax({
+            url:Phonebook.API_URL + "?id=" + id,
+            method: "DELETE",
         }).done(function () {
             Phonebook.getItems();
         })
@@ -55,17 +63,14 @@ window.Phonebook = {
             <td><a href="#" class="delete-item" data-id="${item.id}>
             <i class="fas fa-trash-alt"></i></a></td>
         </tr>`
-
     },
 
     bindEvents: function () {
-        $("#create-item-form").submit (function (event) {
+        $("#create-item-form").submit(function (event) {
             event.preventDefault();
-
             Phonebook.createItem();
-
          })
-    },
+    }
 };
 
 Phonebook.getItems();

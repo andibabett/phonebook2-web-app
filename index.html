@@ -10,7 +10,6 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-<body>
 
 
 <div id="layout" class="x-borders">
@@ -31,72 +30,127 @@
 
 
 
-<div id="content">
+    <div id="content">
 
-    <h1>Phonebook</h1>
+        <h1>Phonebook</h1>
 
-    <h3>Add new contact</h3>
+        <!--    <h3>Add new contact</h3>-->
 
-    <form id="create-item-form">
-        <input type="text" id="search-field" placeholder="Search">
-        <input type="submit" id="submit-form">
-    </form>
+        <form id="create-item-form">
+            <input type="text" id="search-field" placeholder="Search">
+            <input type="submit" id="submit-form">
+        </form>
 
-    <table id="phone_book_items">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Nickname</th>
-            <th>Phone Number</th>
-            <th>Email Adress</th>
-            <th>Home Adress</th>
-<!--            <th>Done</th>-->
-            <th>Delete</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th>1</th>
-            <td>Kovacs</td>
-            <td>Andrea</td>
-            <td>Andi</td>
-            <td>0123456789</td>
-            <td>andi_babett@yahoo.com</td>
-            <td>Cluj-Napoca</td>
-<!--            <td><input type="checkbox" class="mark-done"></td>-->
-            <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td>Andrea</td>
-            <td>Babett</td>
-            <td>Babett</td>
-            <td>0123456789</td>
-            <td>andreababettkovacs@gmail.com</td>
-            <td>Cluj-Napoca</td>
-<!--            <td><input type="checkbox" class="mark-done"></td>-->
-            <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
-        </tr>
-        <tr>
-            <th>3</th>
-            <td>Kovacs</td>
-            <td>Babett</td>
-            <td>Andi</td>
-            <td>0123456789</td>
-            <td>andi_babett@yahoo.com</td>
-            <td>Cluj-Napoca</td>
-<!--            <td><input type="checkbox" class="mark-done"></td>-->
-            <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+        <table id="phone_book_items">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Nickname</th>
+                <th>Phone Number</th>
+                <th>Email Adress</th>
+                <th>Home Adress</th>
+                <!--            <th>Done</th>-->
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>1</th>
+                <td>Kovacs</td>
+                <td>Andrea</td>
+                <td>Andi</td>
+                <td>0123456789</td>
+                <td>andi_babett@yahoo.com</td>
+                <td>Cluj-Napoca</td>
+                <!--            <td><input type="checkbox" class="mark-done"></td>-->
+                <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
+                <td><a href="#" class="edit-item"><i class="fas fa-user-edit"></i></a></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Andrea</td>
+                <td>Babett</td>
+                <td>Babett</td>
+                <td>0123456789</td>
+                <td>andreababettkovacs@gmail.com</td>
+                <td>Cluj-Napoca</td>
+                <!--            <td><input type="checkbox" class="mark-done"></td>-->
+                <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
+                <td><a href="#" class="edit-item"><i class="fas fa-user-edit"></i></a></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Kovacs</td>
+                <td>Babett</td>
+                <td>Andi</td>
+                <td>0123456789</td>
+                <td>andi_babett@yahoo.com</td>
+                <td>Cluj-Napoca</td>
+                <!--            <td><input type="checkbox" class="mark-done"></td>-->
+                <td><a href="#" class="delete-item"><i class="fas fa-trash-alt"></i></a></td>
+                <td><a href="#" class="edit-item"><i class="fas fa-user-edit"></i></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-<script src="js/lib/jquery-3.4.1.min.js"></script>
-<script src="js/phonebook.js"></script>
+    <div id="content-wrapper">
+        <div id="left-bar">
+            <div id="news-widget" class="widget">
+                <div class="content">
+                    <p>
+                        Add new contact
+<!--                        <a id="show-info" href="#">read more</a>-->
+
+<!--                        <span id="more-info" style="display: ruby;">-->
+<!--                             <span id="more-info" style="display: none;">-->
+
+<!--                            made at 'Web programming' course.-->
+                            <!--                            We learned about HTML (Hyper Text Markup Language), CSS (Cascading Style Sheets) and JS (JavaScript)-->
+                <table id="phone-book">
+                    <thead>
+                    <tr>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Phone number</th>
+                        <th>Nickname</th>
+                        <th>Email Adress</th>
+                        <th>Home Adress</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><input type="text" required name="firstName" placeholder="Enter first name"></td>
+                            <td><input type="text" name="lastName" placeholder="Enter last name"></td>
+                            <td><input type="text" required name="phoneNumber" placeholder="Enter phone number"></td>
+                            <td><input type="text" required name="nickName" placeholder="Enter Nickname"></td>
+                            <td><input type="text" required name="emailAdresse" placeholder="Enter Email Adress"></td>
+                            <td><input type="text" required name="homeAdress" placeholder="Enter Home Adress"></td>
+                            <td>
+                                <button type="submit" title="Save">&#128190;</button>
+                                <button type="reset" onclick="PhoneBook.cancelEdit()" title="Cancel">&#10006;</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                            </form>
 
 
-</body>
+<!--                            <a id="hide-info" href="#">hide detail</a>-->
+<!--                        </span>-->
+
+                </div>
+            </div>
+        </div>
+
+        <script src="js/lib/jquery-3.4.1.min.js"></script>
+        <script src="js/phonebook.js"></script>
+
+    </div>
 </html>
